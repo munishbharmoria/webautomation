@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<webautomationdata>
+
+	<testdata>
+		<testdataref>login</testdataref>
+		<data>
+			<username>aditi.kashyap</username>
+		</data>
+		<data>
+			<password>password123</password>
+		</data>
+	</testdata>
+	
+	<testdata>
+		<testdataref>composeemail</testdataref>
+		<data>
+			<sendtoemail>munishbharmoria@gmail.com</sendtoemail>
+		</data>
+		<data>
+			<emailsubject>Subject: First test automation</emailsubject>
+		</data>
+		<data>
+			<emailbody>Body: First test automation</emailbody>
+		</data>
+	</testdata>
+	
+	<testdata>
+		<testdataref>regrationdata</testdataref>
+		<data>
+			<testcases>111,222,333,444,555</testcases>
+		</data>
+		
+	</testdata>
+	
+	<testdata>
+		<testdataref>sanitydata</testdataref>
+		<data>
+			<testcases>666,777,888,999</testcases>
+		</data>
+		
+	</testdata>
+	
+	
+
+</webautomationdata>
