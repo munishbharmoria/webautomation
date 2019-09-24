@@ -1,7 +1,6 @@
 package com.gl.webautomation.compatibility;
 
 import java.io.FileReader;
-import java.net.URL;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -13,7 +12,6 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
 import com.gl.webautomation.utils.PlatformCapabilityUtils;
-import com.gl.webautomation.utils.WebAutomationUtils;
 
 
 public class PlatformCapabilitiesManager {

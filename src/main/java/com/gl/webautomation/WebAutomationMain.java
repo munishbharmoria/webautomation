@@ -1,10 +1,6 @@
 package com.gl.webautomation;
 
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.List;
-import java.util.Properties;
-
 import com.gl.webautomation.compatibility.PlatformCapabilitiesManager;
 import com.gl.webautomation.compatibility.PlatformCapability;
 import com.gl.webautomation.testmanager.TestData;
