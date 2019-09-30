@@ -4,15 +4,12 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import org.jboss.netty.util.internal.SystemPropertyUtil;
-import org.openqa.selenium.WebDriver;
-
 import com.gl.webautomation.compatibility.PlatformCapabilitiesManager;
 import com.gl.webautomation.compatibility.PlatformCapability;
 import com.gl.webautomation.testmanager.TestData;
 import com.gl.webautomation.testmanager.TestManager;
 
-// Mai
+// Main to startup automation test
 public class WebAutomationMain 
 {
 	

@@ -36,9 +36,9 @@ public class PlatformCapability {
 
 
     /**
-     * Instantiates a new Platform capability like platform, browser, version, instances
+     * Instantiates a new Platform capability like platform, browser, version
      */
-    /*public PlatformCapability() throws IOException, URISyntaxException {
+   /* public PlatformCapability() throws IOException, URISyntaxException {
         platform = Platform.ANY;
         browser = "";
         version = "";
