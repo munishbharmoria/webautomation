@@ -2,6 +2,7 @@ package com.gl.webautomation.compatibility;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.List;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLStreamConstants;
@@ -11,6 +12,10 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
 import org.openqa.selenium.Platform;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 
 public class PlatformCapability {
@@ -33,11 +38,11 @@ public class PlatformCapability {
     /**
      * Instantiates a new Platform capability like platform, browser, version, instances
      */
-    public PlatformCapability() throws IOException, URISyntaxException {
+    /*public PlatformCapability() throws IOException, URISyntaxException {
         platform = Platform.ANY;
         browser = "";
         version = "";
-    }
+    }*/
 
     /**
      * Sets browser through XML.
@@ -262,5 +267,30 @@ public class PlatformCapability {
         }
         throw new IllegalArgumentException("XML file is malformed");
     }
+    
+    
+    
+    /**
+     * Instantiates the WebDriver.
+     *
+     * @return the WebDriver
+     */
+    public WebDriver getWebDriver()
+    {
+        WebDriver webDriver = null;
+        List<PlatformCapability> capabilitiesList   = PlatformCapabilitiesManager.getManager().getPlatformCapabilityList();
+        switch (capabilitiesList.get(0).getBrowser().toUpperCase())
+        {
+            case "CHROME":
+                webDriver = new ChromeDriver();
+                break;
+
+            case "SAFARI":
+                webDriver = new SafariDriver();
+
+        }
+        return webDriver;
+    }
+    
 
 }
