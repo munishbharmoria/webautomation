@@ -31,7 +31,7 @@ public class TestManager {
 		return testDataHashMap.get(name);
 	}
 
-	public static void init() {
+	public static void initTestData() {
 
 		try {
 			ClassLoader classLoader = Class.forName("com.gl.webautomation.testmanager.TestManager").getClassLoader();

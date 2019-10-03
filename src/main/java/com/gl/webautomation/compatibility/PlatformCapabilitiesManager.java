@@ -30,11 +30,11 @@ public class PlatformCapabilitiesManager {
     }
 
     /**
-     * Init boolean to define the Platform Capabilities.
+     * initPlatformCapabilities boolean to define the Platform Capabilities.
      *
      * @return the boolean true if platform capabilities are added successfully, otherwise false if any error occurs
      */
-    public static boolean init() {
+    public static boolean initPlatformCapabilities() {
 
        // String capabilitiesFile = CommandLineParser.getCommandLineParser().getCapabilitiesInfo();
         ClassLoader classLoader;
@@ -43,7 +43,6 @@ public class PlatformCapabilitiesManager {
 			classLoader = Class.forName("com.gl.webautomation.compatibility.PlatformCapabilitiesManager").getClassLoader();
 			capabilitiesFile = classLoader.getResource(PlatformCapabilityUtils.platformCapabilityFile).getFile();
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		

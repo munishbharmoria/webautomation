@@ -15,7 +15,7 @@
 	<testdata>
 		<testdataref>composeemail</testdataref>
 		<data>
-			<sendtoemail>munishbharmoria@gmail.com</sendtoemail>
+			<sendtoemail>aditi.kashyap@gmail.com</sendtoemail>
 		</data>
 		<data>
 			<emailsubject>Subject: First test automation</emailsubject>
@@ -26,7 +26,7 @@
 	</testdata>
 	
 	<testdata>
-		<testdataref>regrationdata</testdataref>
+		<testdataref>regressiondata</testdataref>
 		<data>
 			<testcases>111,222,333,444,555</testcases>
 		</data>

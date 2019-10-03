@@ -15,6 +15,7 @@ import org.openqa.selenium.Platform;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 
@@ -283,6 +284,10 @@ public class PlatformCapability {
         {
             case "CHROME":
                 webDriver = new ChromeDriver();
+                break;
+                
+            case "FIREFOX":
+                webDriver = new FirefoxDriver();
                 break;
 
             case "SAFARI":
