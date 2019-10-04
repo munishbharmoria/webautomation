@@ -9,12 +9,14 @@ import com.gl.webautomation.compatibility.PlatformCapability;
 import com.gl.webautomation.utils.WebDriverUtils;
 
 public class InitializeWebDriver {
+	
+	public static WebDriver driver = null;
 
-	public static WebDriver initializeWebDriver() {
+	public static void initializeWebDriver() {
 		
 			ClassLoader classLoader;
 	        String driverFile = "";
-	        WebDriver driver = null;
+	       // WebDriver driver = null;
 			try {
 				List<PlatformCapability> capabilitiesList   = PlatformCapabilitiesManager.getManager().getPlatformCapabilityList();
 				classLoader = Class.forName("com.gl.webautomation.webdriver.InitializeWebDriver").getClassLoader();
@@ -32,8 +34,10 @@ public class InitializeWebDriver {
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			}
-			
-			return driver;
+	}
+	
+	public static WebDriver getDriver() {
+		return driver;
 	}
 
 }
