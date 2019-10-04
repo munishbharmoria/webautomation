@@ -1,0 +1,8 @@
+{
+  "name": "GoogleHomePage",
+  "SearchInputBox":
+    {
+      "by": "name",
+      "locator": "q"
+    }
+}

@@ -13,7 +13,7 @@ import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
-import com.gl.webautomation.utils.WebAutomationUtils;
+import com.gl.webautomation.utils.TestDataUtils;
 
 public class TestManager {
 
@@ -35,7 +35,7 @@ public class TestManager {
 
 		try {
 			ClassLoader classLoader = Class.forName("com.gl.webautomation.testmanager.TestManager").getClassLoader();
-			URL url = classLoader.getResource(WebAutomationUtils.dataFile);
+			URL url = classLoader.getResource(TestDataUtils.dataFile);
 			parseXML(url);
 		} catch (Exception e) {
 			e.printStackTrace();
