@@ -10,8 +10,11 @@ import org.openqa.selenium.WebDriver;
 
 import com.gl.webautomation.compatibility.PlatformCapabilitiesManager;
 import com.gl.webautomation.compatibility.PlatformCapability;
+import com.gl.webautomation.pageobjects.HomePage;
+import com.gl.webautomation.testcases.HomePageTestCase;
 import com.gl.webautomation.testmanager.TestData;
 import com.gl.webautomation.testmanager.TestManager;
+import com.gl.webautomation.utils.PageFactory;
 import com.gl.webautomation.utils.PlatformCapabilityUtils;
 import com.gl.webautomation.utils.WebDriverUtils;
 import com.gl.webautomation.webdriver.InitializeWebDriver;
@@ -53,6 +56,11 @@ public class WebAutomationMain
         
         List<PlatformCapability> capabilitiesList   = PlatformCapabilitiesManager.getManager().getPlatformCapabilityList();
         System.out.println(capabilitiesList);
+        
+        // Test cases
+        
+        HomePageTestCase case1 = new HomePageTestCase();
+        case1.verifySearch();
         
     }
 }

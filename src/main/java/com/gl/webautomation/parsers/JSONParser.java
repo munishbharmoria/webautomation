@@ -11,10 +11,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
- * Created by Gaurav.Dhingra on 11/16/2015.
- */
-
-/**
  * Utility Class that provides the implementation to read a JSON file and
  * return a corresponding JSON object as defined in org.json package
  */
