@@ -2,8 +2,6 @@ package com.gl.webautomation.utils;
 
 import com.gl.webautomation.pageobjects.HomePage;
 
-import main.java.eclipse.automation.utils.PageFactory;
-
 public class PageFactory {
 	
 	private static PageFactory pageFactory = new PageFactory();
@@ -12,9 +10,10 @@ public class PageFactory {
         return pageFactory;
     }
 	
-	public HomePage getHomePage()
+	public HomePage getHomePage() throws Exception
 	{
-		HomePage homePage = new HomePage();
+		//HomePage homePage = new HomePage();
+		HomePage homePage = new HomePage("HomePage");
 		return homePage;
 	}
 

@@ -1,35 +1,24 @@
-package com.gl.webautomation.utils;
+package com.gl.webautomation.pageobjects.common;
 
 import java.io.IOException;
 import java.util.HashMap;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.openqa.selenium.WebDriver;
 
 import com.gl.webautomation.parsers.JSONParser;
 import com.gl.webautomation.uielements.UIElement;
-import com.gl.webautomation.webdriver.InitializeWebDriver;
 
-public class BaseClass {
+public class BaseCommonImpl {
 	
-	public WebDriver getWebDriver() {
-		return InitializeWebDriver.getDriver();
-	}
-	
-	protected HashMap<String, UIElement> elementsMap = new HashMap<String, UIElement>();
+	HashMap<String, UIElement> elementsMap = new HashMap<String, UIElement>();
 
-	public void populatePageData(String name) throws Exception, IOException {
+	public BaseCommonImpl(String name) throws Exception, IOException {
 
 		String path = "elementlocators/" + name + ".json";
-		ClassLoader classLoader = Class.forName("com.gl.webautomation.utils.BaseClass").getClassLoader();
+		ClassLoader classLoader = Class.forName("com.gl.webautomation.pageobjects.common.BaseCommonImpl").getClassLoader();
 		String pageJsonFile  = classLoader.getResource(path).getFile();
-		//		
-		JSONObject jsonObject = JSONParser.getJSONObjectForAResource(classLoader.getResource(path));
-		
-		//				
-		
-		//JSONObject jsonObject = JSONParser.getJSONObjectForAPage(pageJsonFile);
+		JSONObject jsonObject = JSONParser.getJSONObjectForAPage(pageJsonFile);
 		System.out.println(jsonObject);
 		
 		 JSONArray arr = jsonObject.getJSONArray("uiElements");
@@ -44,8 +33,5 @@ public class BaseClass {
 	        }
 		
 	}
-	
-	
-
 
 }

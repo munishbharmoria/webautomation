@@ -1,0 +1,10 @@
+{
+	"name": "GoogleHomePage",
+	"uiElements": [
+	{
+		"elementName" : "SearchInputBox",
+      	"by" : "name",
+		"locator" : "q"
+	}
+	]
+}

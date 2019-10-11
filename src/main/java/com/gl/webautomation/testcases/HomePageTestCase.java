@@ -6,7 +6,7 @@ import com.gl.webautomation.utils.PageFactory;
 public class HomePageTestCase {
 	
 	
-	public void verifySearch() {
+	public void verifySearch() throws Exception {
 		HomePage homePage = PageFactory.getPageFactory().getHomePage();
 		homePage.inputSearchData("facebook");
 	}
